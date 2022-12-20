@@ -23,7 +23,7 @@ struct ListLayout: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 50, height: 50)
-//                            .padding()
+                            .accessibilityLabel("\(mission.imageName) mission badge")
                         VStack {
                             Text(mission.displayName)
                                 .font(.headline)
@@ -32,6 +32,9 @@ struct ListLayout: View {
                                 .font(.caption)
                                 .foregroundColor(.white.opacity(0.5))
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel(mission.displayName)
+                        .accessibilityHint(mission.formattedLaunchDate)
 //                        .padding(.vertical)
 //                        .frame(maxWidth: .infinity)
 //                        .background(.lightBackground)

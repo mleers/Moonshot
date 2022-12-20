@@ -81,7 +81,12 @@ struct MissionView: View {
                                         }
                                     }
                                     .padding(.horizontal)
-                                    
+                                    .accessibilityElement()
+                                    .accessibilityLabel("\(mission.imageName) mission badge")
+                                    .accessibilityLabel("Launched on: \(mission.formattedLaunchDate)")
+                                    .accessibilityValue("Mission Highlights")
+                                    .accessibilityValue(mission.description)
+
                                 }
                             }
                         }

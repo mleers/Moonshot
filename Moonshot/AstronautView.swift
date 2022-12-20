@@ -25,6 +25,9 @@ struct AstronautView: View {
         .background(.darkBackground)
         .navigationTitle(astronaut.name)
         .navigationBarTitleDisplayMode(.inline)
+        .accessibilityElement()
+        .accessibilityLabel("Portrait of \(astronaut.name)")
+        .accessibilityValue(astronaut.description)
     }
 }
 
